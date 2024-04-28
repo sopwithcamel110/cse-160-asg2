@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Change a point color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="main()" onmousedown="funcShiftKey(event)">
+<div class="outsideWrapper">
+    <div class="insideWrapper">
+        <img src="background.png" width="400" height="400" class="coveredImage">
+        <canvas class="coveringCanvas" id="webgl" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<p>
+<p id="numdot">Loading</p>
+<p>
+<p>Animation + Shift Click on chicken to turn on special movement (wing flapping). Press any key or move a slider to turn off.</p>
+
+<br>
+Lower Leg <input type="range" min="-10" max="10" value="0" class="slider" id="lowerLegSlide">
+<br>
+Thigh <input type="range" min="-6" max="6" value="0" class="slider" id="thighSlide">
+<br>
+Body <input type="range" min="-3" max="3" value="0" class="slider" id="bodyslide">
+<br>
+Head <input type="range" min="-3" max="3" value="0" class="slider" id="headslide">
+
+Animation:
+<button type="button" id="animationOn">ON</button>
+<button type="button" id="animationOff">OFF</button>
+
+<p>
+    Camera Angle <input type="range" min="0" max="360" value="5" class="slider" id="angleSlide">
+<p>
+
+<p>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Cube.js"></script>
+    <script src="BlockyAnimal.js"></script>
+</body>
+</html>
